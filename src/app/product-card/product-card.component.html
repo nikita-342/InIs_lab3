@@ -1,0 +1,48 @@
+<article class="card" *ngIf="item">
+  <div class="image-wrap">
+    <img [src]="item.imageUrl" [alt]="item.name" class="image" />
+  </div>
+
+  <div class="content">
+    <h2 class="title">{{ item.name }}</h2>
+    <p class="description">{{ item.description }}</p>
+
+    <div class="rating">
+      <span class="stars" aria-hidden="true">
+        <img
+          *ngFor="let star of stars"
+          src="assets/star.svg"
+          alt=""
+          class="star" />
+      </span>
+      <span class="rating-value">{{ formattedRating }}</span>
+      <span class="reviews">({{ item.reviews }})</span>
+    </div>
+
+    <div class="price">${{ item.price }}</div>
+
+    <div class="actions">
+      <div class="selector" aria-label="Количество товара">
+        <button
+          class="control"
+          type="button"
+          aria-label="Уменьшить количество"
+          [disabled]="quantity <= minQuantity"
+          (click)="decrease()">
+          −
+        </button>
+        <span class="value">{{ quantity }}</span>
+        <button
+          class="control"
+          type="button"
+          aria-label="Увеличить количество"
+          [disabled]="quantity >= maxQuantity"
+          (click)="increase()">
+          +
+        </button>
+      </div>
+
+      <button class="add-button" type="button" (click)="onAdd()">Add to Cart</button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,20 @@
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="/" aria-label="solara">
+      <img src="assets/solara.svg" alt="solara" class="logo-img" />
+    </a>
+
+    <nav class="topbar-actions" aria-label="Навигация">
+      <button type="button" aria-label="Поиск">
+        <img src="assets/search.svg" alt="" />
+      </button>
+      <button type="button" aria-label="Профиль">
+        <img src="assets/user.svg" alt="" />
+      </button>
+      <button type="button" class="cart-btn" aria-label="Корзина">
+        <img src="assets/cart.svg" alt="" />
+        <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+<div class="app">
+  <app-header [cartCount]="cartCount"></app-header>
+
+  <main class="page">
+    <app-product-list (addToCart)="handleAddToCart($event)"></app-product-list>
+  </main>
+
+  <div class="toast" *ngIf="cartMessage">{{ cartMessage }}</div>
+</div>

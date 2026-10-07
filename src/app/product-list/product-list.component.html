@@ -1,0 +1,14 @@
+<section class="catalog">
+  <div class="catalog-head">
+    <h1>Цифровые товары</h1>
+    <p>UI-киты, иконки и мокапы для ваших проектов</p>
+  </div>
+
+  <div class="product-grid">
+    <app-product-card
+      *ngFor="let product of products"
+      [item]="product"
+      (addToCart)="onAddToCart(product, $event)">
+    </app-product-card>
+  </div>
+</section>

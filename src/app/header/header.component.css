@@ -1,0 +1,91 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e8ee;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
+}
+
+.topbar-inner {
+  width: min(1440px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  display: block;
+  height: 52px;
+  width: auto;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-actions button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.topbar-actions button img {
+  width: 24px;
+  height: 24px;
+}
+
+.topbar-actions button:hover {
+  background: #f0f1f5;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #635bff;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .topbar-inner {
+    width: min(100% - 32px, 1440px);
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .topbar-actions button {
+    width: 42px;
+    height: 42px;
+  }
+}
